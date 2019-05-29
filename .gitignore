@@ -1,0 +1,19 @@
+*.log
+*.csv
+
+venv/
+__pycache__/
+.ipynb_checkpoints/
+
+Get Track Turning Direction.ipynb
+
+graphs/*
+intermediate_checkpoint/*
+simulation_episode/*
+logs/*
+
+!graphs/.gitkeep
+!intermediate_checkpoint/.gitkeep
+!simulation_episode/.gitkeep
+!simulation_episode/original/*.png
+!logs/.gitkeep
