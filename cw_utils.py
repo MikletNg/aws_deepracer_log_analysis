@@ -10,10 +10,10 @@ import sys
 
 def get_log_events(log_group, stream_name=None, stream_prefix=None, start_time=None, end_time=None, aws_profile='default'):
     if aws_profile == 'default':
+        client = boto3.client('logs')
+    else:
         session = boto3.Session(profile_name=aws_profile)
         client = session.client('logs')
-    else:
-        client = boto3.client('logs')
     if stream_name is None and stream_prefix is None:
         print ("both stream name and prefix can't be None")
         return
